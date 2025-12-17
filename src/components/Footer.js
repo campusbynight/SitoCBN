@@ -62,7 +62,6 @@ const Footer = () => {
         <br/>
 
         <div className="footer-text">
-          <p>Piazza San Domenico</p>
           <p>Bologna</p>
         </div>
         
