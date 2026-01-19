@@ -39,7 +39,7 @@
   line-height: 1.6;
   color: #555;
 }
-
+/*
 .footer-text p:first-child {
   color: var(--cbn-blue);
   font-family: var(--font-title);
@@ -49,6 +49,17 @@
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
+*/
+.footer-text p {
+  color: var(--cbn-blue);
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
 
 .footer-logo-container {
   display: flex;

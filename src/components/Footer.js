@@ -45,15 +45,16 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        
+        {/*
         <div className="footer-text">
           <p>2025's Sponsor</p>
         </div>
+        */}
         
         <div className="footer-logo-container">
-          {sponsorLogos.map((logo, index) => (
+          {/*sponsorLogos.map((logo, index) => (
             <img key={index} src={logo.src} alt={logo.alt} className="footer-logo" />
-          ))}
+          ))*/}
         </div>
 
         <br/>
@@ -62,7 +63,11 @@ const Footer = () => {
         <br/>
 
         <div className="footer-text">
-          <p>Bologna</p>
+          <div>
+            <p>Piazza Scaravilli</p>
+            <p>Bologna</p>
+          </div>
+          
         </div>
         
         <div className="footer-logo-container"> 

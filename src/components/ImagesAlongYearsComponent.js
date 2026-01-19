@@ -82,7 +82,7 @@ const ImagesAlongYearsComponent = () => {
           "Un'amicizia per vivere, vivere per un'amicizia"<br/>
           "In che cosa posso sperare?"<br/>
           "Dove si accende la vita?"<br/>
-          Nelle scorse edizioni del "Campus By Night" sono intervenuti personaggi appartenenti al mondo dello spettacolo, della musica, dello sport, dell'università ed esponenti politici tra cui: Mario Mauro (ex ministro e politico italiano), Morgan (musicista e cantautore italiano), Paolo Cevoli (comico), Leonardo (ex calciatore e allenatore), Gherardo Colombo (ex magistrato), Agnese Moro (giornalista), Giorgio De Rita (Segretario Generale Censis) e tanti docenti dell'Alma Mater.<br/>
+          Nelle scorse edizioni del "Campus By Night" sono intervenuti personaggi appartenenti al mondo dello spettacolo, della musica, dello sport, dell'università ed esponenti politici tra cui: Paolo Benanti (esperto in etica dell'IA), Farhad Bitani (scrittore afghano), Lino Lardo (ex cestista e allenatore), Nando Sanvito (giornalista), Luciano Violante (ex magistrato e politico), Mario Mauro (ex ministro e politico italiano), Morgan (musicista e cantautore italiano), Paolo Cevoli (comico), Leonardo (ex calciatore e allenatore), Gherardo Colombo (ex magistrato), Agnese Moro (giornalista), Giorgio De Rita (Segretario Generale Censis) e tanti docenti dell'Alma Mater.<br/>
           </p>
         </div>
       </div>

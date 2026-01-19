@@ -19,6 +19,15 @@ const HomeComponent = () => {
       {/*<CountdownComponent />*/}
       <div className="widget-container">
         <div className="widget">
+          <h2>{data.manifestTitle}</h2>
+          {data.manifestText.split('\n\n').map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+
+      <div className="widget-container">
+        <div className="widget">
           <h2>{data.widgetTitle}</h2>
           <p>{data.widgetText}</p>
         </div>
@@ -28,15 +37,43 @@ const HomeComponent = () => {
         }
 
       </div>
+      {//ci sto mettendo le cazzo di mani
+      }
       <div className="widget-container">
         <div className="widget">
-          <h2>{data.manifestTitle}</h2>
-          {data.manifestText.split('\n\n').map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
-          ))}
+          <h2>{data.doveQuandoTitle}</h2>
+          <p>{data.doveQunadoText}</p>
         </div>
-
       </div>
+      <div className="widget-container">
+        <div className="widget">
+          <h2>{data.chiSiamoTitle}</h2>
+          <p>{data.chiSiamoText}</p>
+        </div>
+      </div>
+      <div className="widget-container">
+        <div className="widget">
+          <h2>{data.cosaCiMuoveTitle}</h2>
+          <p>{data.cosaCiMuoveText}</p>
+        </div>
+      </div>
+      <div className="widget-container">
+        <div className="widget">
+          <h2>{data.percheAiutarciTitle}</h2>
+          <p>{data.percheAiutarciText}</p>
+        </div>
+      </div>
+      <div className="widget-container">
+        <div className="widget">
+          <h2>{data.comeSostenerciTitle}</h2>
+          <p>{data.comeSostenerciText}</p>
+        </div>
+      </div>
+      
+      
+
+
+      
     </div>
   );
 };
