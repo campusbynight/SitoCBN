@@ -67,6 +67,10 @@ const Footer = () => {
             <p>Piazza Scaravilli</p>
             <p>Bologna</p>
           </div>
+          <div>
+            <h2>Contatti</h2>
+            <a href="mailto:commerciale.campusbynight@gmail.com">Mail</a>
+          </div>
           
         </div>
         
