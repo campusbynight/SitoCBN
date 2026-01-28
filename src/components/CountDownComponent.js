@@ -3,7 +3,7 @@ import React from 'react';
 import Countdown from 'react-countdown';
 
 const CountdownComponent = () => {
-  const targetDate = new Date('2026-05-07T00:00:00');
+  const targetDate = new Date('2026-05-07T18:00:00');
 
   // Renderer personalizzato per il countdown
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
