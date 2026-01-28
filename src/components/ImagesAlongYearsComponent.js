@@ -10,17 +10,30 @@ const importAllImages = () => {
     true,
     /\.(png|jpe?g|JPG|JPEG)$/
   );
-  const images = context.keys().map((key, index) => {
+
+  const allKeys = context.keys();
+  // Filtra solo le chiavi che non appartengono alle cartelle "_scaled" per avere la lista originale
+  const originalKeys = allKeys.filter(key => !key.includes('_scaled'));
+
+  const images = originalKeys.map((key, index) => {
     // key es. "./2024/DSC_0207.JPG"
     const parts = key.split('/');
     const year = parts[1]; // estrae l'anno
+    const fileName = parts[parts.length - 1]; // estrae il nome file
+    
+    // Costruisce il percorso presunto della versione scalata: "./2024_scaled/DSC_0207.JPG"
+    const scaledKey = `./${year}_scaled/${fileName}`;
+    const hasScaled = allKeys.includes(scaledKey);
+
     return {
       id: `${year}-${index}`,
       year: parseInt(year, 10),
-      url: context(key),
+      url: context(key), // Immagine originale (pesante)
+      thumbnail: hasScaled ? context(scaledKey) : context(key), // Immagine scalata (leggera) o fallback
       caption: `CBN ${year}`
     };
   });
+
   // Ordina in ordine inverso: prima le immagini più recenti
   images.sort((a, b) => {
     if (a.year !== b.year) {
@@ -97,7 +110,7 @@ const ImagesAlongYearsComponent = () => {
             tabIndex={0}
           >
             <ProgressiveImage 
-              src={image.url && image.url.default ? image.url.default : image.url}
+              src={image.thumbnail && image.thumbnail.default ? image.thumbnail.default : image.thumbnail}
               alt={image.caption}
               className="grid-image"
             />
