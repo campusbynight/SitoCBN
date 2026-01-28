@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fc3c64f0.css",
-    "main.js": "/static/js/main.1934fd7e.js",
+    "main.js": "/static/js/main.078e9fb4.js",
     "static/js/488.ef4d33f3.chunk.js": "/static/js/488.ef4d33f3.chunk.js",
     "static/media/IMG_9067.JPEG": "/static/media/IMG_9067.ad29d0d45f8702dea1db.JPEG",
     "static/media/IMG_9999.jpg": "/static/media/IMG_9999.7f05c265f15e0aa9b92a.jpg",
@@ -24,7 +24,7 @@
     "static/media/P1063607.JPEG": "/static/media/P1063607.7e92f0f72f1c9eb4229e.JPEG",
     "static/media/DSC_0207.JPG": "/static/media/DSC_0207.e948138ada54d0f391e1.JPG",
     "static/media/IMG_2802.JPEG": "/static/media/IMG_2802.cac8b4577338cd4d4902.JPEG",
-    "static/media/CBN_Cover.jpg": "/static/media/CBN_Cover.a924700b9e3a7b6c549e.jpg",
+    "static/media/CBN_Cover.jpg": "/static/media/CBN_Cover.e8086c479e3c05e7fbca.jpg",
     "static/media/mappa_2025.png": "/static/media/mappa_2025.f364a0304d39f6ded17d.png",
     "static/media/IMG_1118.JPEG": "/static/media/IMG_1118.e575e0ed7aa72a5d4f31.JPEG",
     "static/media/IMG_1127.JPEG": "/static/media/IMG_1127.57acb99111eb1b5a5323.JPEG",
@@ -56,11 +56,11 @@
     "static/media/nier.png": "/static/media/nier.fc5b1314936e24480f17.png",
     "index.html": "/index.html",
     "main.fc3c64f0.css.map": "/static/css/main.fc3c64f0.css.map",
-    "main.1934fd7e.js.map": "/static/js/main.1934fd7e.js.map",
+    "main.078e9fb4.js.map": "/static/js/main.078e9fb4.js.map",
     "488.ef4d33f3.chunk.js.map": "/static/js/488.ef4d33f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc3c64f0.css",
-    "static/js/main.1934fd7e.js"
+    "static/js/main.078e9fb4.js"
   ]
 }
