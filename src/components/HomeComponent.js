@@ -16,8 +16,8 @@ const HomeComponent = () => {
       <div className="bckHOME">
         <img src={imgBck} alt="Copertina" className="immagineHome" />
       </div>
-      {/*<CountdownComponent />*/}
-      <div className="widget-container">
+      {<CountdownComponent />}
+      {/*<div className="widget-container">
         <div className="widget">
           <h2>{data.manifestTitle}</h2>
           {data.manifestText.split('\n\n').map((paragraph, idx) => (
@@ -25,7 +25,7 @@ const HomeComponent = () => {
           ))}
         </div>
       </div>
-
+      */}
       <div className="widget-container">
         <div className="widget">
           <h2>{data.widgetTitle}</h2>
