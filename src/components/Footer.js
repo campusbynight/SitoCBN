@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import facebookLogo from '../files/assets/facebook.png'; 
 import instagramLogo from '../files/assets/insta.png';
 import ilTubo from '../files/assets/youtube.png';
+import golemEasterEgg from '../files/assets/GolemIngranaggioAntico.png';
 
 // Import dei loghi sponsor
 import agrinet from '../files/PNG_sponsor_2025/agrinet.png';
@@ -23,6 +24,16 @@ import thResorts from '../files/PNG_sponsor_2025/th resorts.png';
 import yomax from '../files/PNG_sponsor_2025/yomax.png';
 
 const Footer = () => {
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleEasterEggClick = () => {
+    setClickCount(prev => prev + 1);
+  };
+
+  const closeEasterEgg = () => {
+    setClickCount(0);
+  };
+
   const sponsorLogos = [
     { src: agrinet, alt: 'Agrinet' },
     { src: aura, alt: 'Aura' },
@@ -52,6 +63,14 @@ const Footer = () => {
         */}
         
         <div className="footer-logo-container">
+      {clickCount >= 40 && (
+        <img 
+          src={golemEasterEgg} 
+          alt="Golem Ingranaggio Antico" 
+          className="golem-animation"
+          onClick={closeEasterEgg}
+        />
+      )}
           {/*sponsorLogos.map((logo, index) => (
             <img key={index} src={logo.src} alt={logo.alt} className="footer-logo" />
           ))*/}
@@ -86,13 +105,19 @@ const Footer = () => {
           </a>
         </div>
 
-                <br/>
+        <br/>
         <br/>        <br/>
 
         <div >
           <p>
-            CBN Nightlife Team <br />
-            yaGogihGoicorF S.P.A
+            © 2026 Campus By Night. Tutti i diritti riservati.
+          </p>
+          <p 
+            className='eg' 
+            onClick={handleEasterEggClick} 
+            style={{ cursor: 'pointer', userSelect: 'none' }}
+          >
+            Realizzato dal team CBNerds
           </p>
         </div>
       </div>

@@ -186,3 +186,43 @@
   justify-content: center;
   gap: 2rem;
 }
+
+/* Easter Egg Animation */
+.golem-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: auto;
+  z-index: 9999;
+  cursor: pointer;
+  animation: golemChaos 2s linear infinite;
+}
+
+@keyframes golemChaos {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.5);
+    top: 50%;
+    left: 50%;
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    top: 20%;
+    left: 80%;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.8);
+    top: 80%;
+    left: 20%;
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.2);
+    top: 10%;
+    left: 10%;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.5);
+    top: 50%;
+    left: 50%;
+  }
+}
