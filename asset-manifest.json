@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7150c973.css",
-    "main.js": "/static/js/main.bec150cb.js",
+    "main.css": "/static/css/main.ed1ba9a4.css",
+    "main.js": "/static/js/main.576bf140.js",
     "static/js/488.ef4d33f3.chunk.js": "/static/js/488.ef4d33f3.chunk.js",
     "static/media/IMG_9067.JPEG": "/static/media/IMG_9067.ad29d0d45f8702dea1db.JPEG",
     "static/media/IMG_9999.jpg": "/static/media/IMG_9999.7f05c265f15e0aa9b92a.jpg",
@@ -35,6 +35,7 @@
     "static/media/IMG_1125.JPEG": "/static/media/IMG_1125.7956e844ea8f87b6d2b7.JPEG",
     "static/media/IMG_1129.JPEG": "/static/media/IMG_1129.44e3be81e179f43f627d.JPEG",
     "static/media/IMG_1128.JPEG": "/static/media/IMG_1128.83b126d3d820f859683a.JPEG",
+    "static/media/GolemIngranaggioAntico.png": "/static/media/GolemIngranaggioAntico.a6ddbbad23a04ad2f397.png",
     "static/media/insta.png": "/static/media/insta.7ecd0781d415e9edacfe.png",
     "static/media/colligo_inverted_text.png": "/static/media/colligo_inverted_text.85eace0d4b75610c735e.png",
     "static/media/agrinet.png": "/static/media/agrinet.0da9d4179f56d4cbed7f.png",
@@ -55,12 +56,12 @@
     "static/media/aura.png": "/static/media/aura.d91bf7a578f88b7b747a.png",
     "static/media/nier.png": "/static/media/nier.fc5b1314936e24480f17.png",
     "index.html": "/index.html",
-    "main.7150c973.css.map": "/static/css/main.7150c973.css.map",
-    "main.bec150cb.js.map": "/static/js/main.bec150cb.js.map",
+    "main.ed1ba9a4.css.map": "/static/css/main.ed1ba9a4.css.map",
+    "main.576bf140.js.map": "/static/js/main.576bf140.js.map",
     "488.ef4d33f3.chunk.js.map": "/static/js/488.ef4d33f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7150c973.css",
-    "static/js/main.bec150cb.js"
+    "static/css/main.ed1ba9a4.css",
+    "static/js/main.576bf140.js"
   ]
 }
