@@ -106,16 +106,21 @@ const Footer = () => {
         </div>
 
         <br/>
-        <br/>        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
         <div >
-          <p>
+          <p
+            style={{color: '#BBB' }}
+          >
             © 2026 Campus By Night. Tutti i diritti riservati.
           </p>
           <p 
             className='eg' 
             onClick={handleEasterEggClick} 
-            style={{ cursor: 'pointer', userSelect: 'none' }}
+            style={{ userSelect: 'none', color: '#BBB' }}
           >
             Realizzato dal team CBNerds
           </p>
