@@ -1,26 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import BottomBar from './components/BottomBar';
-import HomeComponent from './components/HomeComponent';
-import ProgInfoComponent from './components/ProgInfoComponent';
-import FoodComponent from './components/FoodComponent';
-import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
-import Lotteria from './components/ComponenteLotteria';
-import Footer from './components/Footer';
-import "./components/swipe.css";
+import BottomBar from './components/BottomBar/BottomBar';
+import Home from './pages/Home/Home';
+import Info from './pages/Info/Info';
+import Food from './pages/Food/Food';
+import Gallery from './pages/Gallery/Gallery';
+import Lottery from './pages/Lottery/Lottery';
+import Footer from './components/Footer/Footer';
+import "./styles/swipe.css";
+import './styles/App.css';
+import logoAnimato from './files/logo_animato.mp4';
 
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  // Gestione del preloader: rimosso il timer fisso, ora controllato dalla fine del video
+  // useEffect(() => { ... }, []);
+
+  const handleVideoUpdate = (e) => {
+    // Fai partire l'apertura 0.5 secondi PRIMA della fine del video
+    // Modifica '0.5' per anticipare o ritardare l'apertura
+    const timeLeft = e.target.duration - e.target.currentTime;
+    if (timeLeft < 0.2) {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     // Aggiorna l'indice attivo in base al percorso
     switch (location.pathname) {
       case '/':
         setActiveIndex(0);
-        break; //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
-      /*case '/info':
+        break;
+      case '/info':
         setActiveIndex(1);
         break;
       case '/food':
@@ -28,9 +43,9 @@ function App() {
         break;
       case '/lottery':
         setActiveIndex(3);
-        break;*/
+        break;
       case '/images':
-        setActiveIndex(/*4*/1);
+        setActiveIndex(4);
         break;
       default:
         setActiveIndex(0);
@@ -46,7 +61,7 @@ function App() {
         navigate('/');
         break;
       case 1:
-        /*navigate('/info');*/ navigate('/images'); //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
+        navigate('/info');
         break;
       case 2:
         navigate('/food');
@@ -66,19 +81,37 @@ function App() {
 
   return (
     <div>
-      <div className="appContainer">
-        <div className="swipePage">
-          <Routes>
-            <Route path="/" element={<HomeComponent />} />
-            <Route path="/info" element={<ProgInfoComponent />} />
-            <Route path="/food" element={<FoodComponent />} />
-            <Route path="/lottery" element={<Lotteria />} />
-            <Route path="/images" element={<ImagesAlongYearsComponent />} />
-          </Routes>
+       {/* Preloader */}
+       <div className={`preloader ${loading ? '' : 'hidden'}`}>
+        <div className="preloader-backdrop"></div>
+        <div className="loader-content">
+           <video 
+             src={logoAnimato} 
+             autoPlay 
+             muted 
+             playsInline 
+             onTimeUpdate={handleVideoUpdate}
+             style={{ width: '250px', height: 'auto' }}
+           />
         </div>
-        <BottomBar activeIndex={activeIndex} setActiveIndex={handleSetActiveIndex} />
       </div>
-      <Footer />
+
+      {/* Contenuto del sito */}
+      <div className={`site-content ${loading ? '' : 'visible'}`}>
+        <div className="appContainer">
+          <div className="swipePage">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/info" element={<Info />} />
+              <Route path="/food" element={<Food />} />
+              <Route path="/lottery" element={<Lottery />} />
+              <Route path="/images" element={<Gallery />} />
+            </Routes>
+          </div>
+          <BottomBar activeIndex={activeIndex} setActiveIndex={handleSetActiveIndex} />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
