@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import programData from './Programma.json';
+import programData from '../../data/Programma.json';
 import './Info.css';
 import MyMap from '../../files/ui/mappa_2025.png';
 

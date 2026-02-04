@@ -4,7 +4,7 @@
 /* This forces the browser to use the next font in the stack for these chars */
 @font-face {
   font-family: 'Recoleta';
-  src: url('../assets/Font/font titoli/recoleta/fonts/fonnts.com-recoleta-regular.otf') format('opentype');
+  src: url('../assets/fonts/font titoli/recoleta/fonts/fonnts.com-recoleta-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 }
 @font-face {
   font-family: 'Recoleta';
-  src: url('../assets/Font/font titoli/recoleta/fonts/fonnts.com-recoleta-bold.otf') format('opentype');
+  src: url('../assets/fonts/font titoli/recoleta/fonts/fonnts.com-recoleta-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 /* Articulat CF: applying same safety exclusion */
 @font-face {
   font-family: 'Articulat CF';
-  src: url('../assets/Font/font corpo/articulat/articulat-cf-normal.otf') format('opentype');
+  src: url('../assets/fonts/font corpo/articulat/articulat-cf-normal.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 }
 @font-face {
   font-family: 'Articulat CF';
-  src: url('../assets/Font/font corpo/articulat/articulat-cf-bold.otf') format('opentype');
+  src: url('../assets/fonts/font corpo/articulat/articulat-cf-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@
 
 @font-face {
   font-family: 'CampusByNight';
-  src: url('../assets/Font/font campusbynight/CampusByNight-Regular.otf') format('opentype');
+  src: url('../assets/fonts/font campusbynight/CampusByNight-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

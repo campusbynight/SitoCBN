@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import premi from './PremiLotteria.json';
+import premi from '../../data/PremiLotteria.json';
 
 const Lotteria = () => {
   const [query, setQuery] = useState('');

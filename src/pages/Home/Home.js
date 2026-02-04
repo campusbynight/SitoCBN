@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import CountdownComponent from "../../components/UI/CountDownComponent";
 import imgBck from '../../files/images/cover.jpg';
-import data from "./HomeData.json"
+import data from "../../data/HomeData.json"
 
 const HomeComponent = () => {
 

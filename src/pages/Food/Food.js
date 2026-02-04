@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import data from './FastFood.json';
+import data from '../../data/FastFood.json';
 import "./Food.css"
 
 
