@@ -111,7 +111,7 @@
   /* Impostiamo spread a 140vmax per coprire appena il centro con un margine di sicurezza, */
   /* eliminando il tempo morto iniziale dell'animazione. */
   /* NOTA: Usiamo un colore manuale più scuro (#08102d) per compensare l'effetto "slavato" del box-shadow */
-  box-shadow: inset 0 0 100px 140vmax #0b0c33;
+  box-shadow: inset 0 0 100px 140vmax #0F1E57;
 
   /* Animazione fluida solo dell'ombra */
   /* Riportato a 3.5s per lentezza, ma parte subito grazie allo spread ridotto */

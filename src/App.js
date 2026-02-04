@@ -9,7 +9,7 @@ import Lottery from './pages/Lottery/Lottery';
 import Footer from './components/Footer/Footer';
 import "./styles/swipe.css";
 import './styles/App.css';
-import logoAnimato from './files/logo_animato.mp4';
+import logoAnimato from './files/logo_animato.webm';
 
 function App() {
   const location = useLocation();
