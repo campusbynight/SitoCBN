@@ -1,23 +1,14 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FiHome, FiCalendar, FiFolder } from 'react-icons/fi';
-import { IoFastFoodOutline } from "react-icons/io5";
-import { TbListNumbers } from "react-icons/tb";
-
-
+import { navLinks } from '../../config/navLinks';
 import './BottomBar.css';
 
-const BottomBar = ({ setActiveIndex }) => {
+const BottomBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const items = [
-    { icon: <FiHome size={24} />, label: 'Home', path: '/' },
-  //  { icon: <FiCalendar size={24} />, label: 'Info', path: '/info' },
-  //  { icon: <IoFastFoodOutline size={24} />, label: 'Food', path: '/food' },
-  //  { icon: <TbListNumbers size={24} />, label: 'Lotteria', path: '/lottery' },
-    { icon: <FiFolder size={24} />, label: 'Immagini', path: '/images' }
-  ];
+  // Filtriamo solo i link abilitati come definito nella config
+  const items = navLinks.filter(link => link.enabled);
 
   const currentPath = location.pathname;
   let activeIndex = items.findIndex(item => item.path === currentPath);
@@ -40,7 +31,6 @@ const BottomBar = ({ setActiveIndex }) => {
             key={index}
             className={`navButton ${activeIndex === index ? 'active' : ''}`}
             onClick={() => {
-              setActiveIndex(index);
               if (item.path) navigate(item.path);
             }}
             aria-label={item.label}
@@ -52,7 +42,7 @@ const BottomBar = ({ setActiveIndex }) => {
           className="activeIndicator"
           style={{
             transform: `translateX(${activeIndex * 100}%)`,
-            width: `${100 / items.length}%` // Dynamic width based on items count
+            width: `${100 / items.length}%`
           }}
         />
       </div>

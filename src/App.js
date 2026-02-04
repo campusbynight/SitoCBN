@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import BottomBar from './components/BottomBar/BottomBar';
-import Home from './pages/Home/Home';
-import Info from './pages/Info/Info';
-import Food from './pages/Food/Food';
-import Gallery from './pages/Gallery/Gallery';
-import Lottery from './pages/Lottery/Lottery';
 import Footer from './components/Footer/Footer';
+import { navLinks } from './config/navLinks';
 import "./styles/swipe.css";
 import './styles/App.css';
 import logoAnimato from './files/animazione_logo_CBN26.webm';
 
 function App() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
   const handleVideoUpdate = (e) => {
@@ -30,12 +24,6 @@ function App() {
     // Torna in cima alla pagina ad ogni cambio di rotta
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [location.pathname]);
-
-  const handleSetActiveIndex = (index) => {
-    setActiveIndex(index);
-    // (opzionale) scroll animato quando si clicca il pulsante
-    // window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  };
 
   return (
     <div>
@@ -60,16 +48,15 @@ function App() {
         <div className="appContainer">
           <div className="swipePage">
             <Routes>
-              <Route path="/" element={<Home />} />
-            {/*
-              <Route path="/info" element={<Info />} />
-              <Route path="/food" element={<Food />} />
-              <Route path="/lottery" element={<Lottery />} />
-            */}
-              <Route path="/images" element={<Gallery />} />
+              {navLinks
+                .filter(link => link.enabled)
+                .map((link, index) => (
+                  <Route key={index} path={link.path} element={link.component} />
+                ))
+              }
             </Routes>
           </div>
-          <BottomBar activeIndex={activeIndex} setActiveIndex={handleSetActiveIndex} />
+          <BottomBar />
         </div>
         <Footer />
       </div>
