@@ -9,7 +9,7 @@ import Lottery from './pages/Lottery/Lottery';
 import Footer from './components/Footer/Footer';
 import "./styles/swipe.css";
 import './styles/App.css';
-import logoAnimato from './files/logo_animato.webm';
+import logoAnimato from './files/animazione_logo_CBN26.webm';
 
 function App() {
   const location = useLocation();
@@ -35,15 +35,15 @@ function App() {
       case '/':
         setActiveIndex(0);
         break;
-      case '/info':
-        setActiveIndex(1);
-        break;
-      case '/food':
-        setActiveIndex(2);
-        break;
-      case '/lottery':
-        setActiveIndex(3);
-        break;
+    //    case '/info':
+    //    setActiveIndex(1);
+    //    break;
+    //  case '/food':
+    //    setActiveIndex(2);
+    //    break;
+    //  case '/lottery':
+    //    setActiveIndex(3);
+    //    break;
       case '/images':
         setActiveIndex(4);
         break;
@@ -60,15 +60,15 @@ function App() {
       case 0:
         navigate('/');
         break;
-      case 1:
-        navigate('/info');
-        break;
-      case 2:
-        navigate('/food');
-        break;
-      case 3:
-        navigate('/lottery');
-        break;
+    //  case 1:
+    //    navigate('/info');
+    //    break;
+    //  case 2:
+    //    navigate('/food');
+    //    break;
+    //  case 3:
+    //    navigate('/lottery');
+    //    break;
       case 4:
         navigate('/images');
         break;
@@ -90,8 +90,9 @@ function App() {
              autoPlay 
              muted 
              playsInline 
+             preload="auto"
+             style={{ width: '700px', height: 'auto' }}
              onTimeUpdate={handleVideoUpdate}
-             style={{ width: '250px', height: 'auto' }}
            />
         </div>
       </div>
@@ -102,9 +103,11 @@ function App() {
           <div className="swipePage">
             <Routes>
               <Route path="/" element={<Home />} />
+            {/*
               <Route path="/info" element={<Info />} />
               <Route path="/food" element={<Food />} />
               <Route path="/lottery" element={<Lottery />} />
+            */}
               <Route path="/images" element={<Gallery />} />
             </Routes>
           </div>
